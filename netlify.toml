@@ -1,0 +1,10 @@
+[build]
+base = "."
+command = "yarn build"
+publish = "./build/"
+
+
+[[redirects]]
+base = "/*"
+command = "index.html"
+status = "200"
