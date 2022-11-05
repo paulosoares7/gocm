@@ -1,4 +1,3 @@
-
 import { useVelocityVerlet } from "./Verlet/useVelocityVerlet";
 import {
   Chart as ChartJS,
@@ -9,7 +8,7 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
+} from "chart.js";
 
 ChartJS.register(
   CategoryScale,
@@ -22,67 +21,63 @@ ChartJS.register(
   Legend
 );
 
-export function useProgressChartsData(){
-  const {
-    t,
-    r, 
-    velocityV, 
-    accelerationA,
-    kineticEnergy,
-  } = useVelocityVerlet();
+export function useProgressChartsData() {
+  const { t, r, velocityV, accelerationA, kineticEnergy } = useVelocityVerlet();
 
-
-   const EMChartData = {
+  const EMChartData = {
     labels: t,
     datasets: [
       {
-        label: 'Cinética',
+        label: "Cinética",
         data: kineticEnergy,
 
-        backgroundColor: ['rgba(153, 102, 255, 1)']
+        backgroundColor: ["rgba(153, 102, 255, 1)"],
       },
-    ]
+    ],
   };
 
-    
-   const positionChartData = {
+  const positionChartData = {
     labels: t,
 
-    datasets: [{
-      label: 'Posição x Tempo',
-      data: r,
-      borderColor: 'rgb(75, 192, 192)',
-      tension: 0.1
-    }]
+    datasets: [
+      {
+        label: "Posição x Tempo",
+        data: r,
+        borderColor: "rgb(75, 192, 192)",
+        tension: 0.1,
+      },
+    ],
   };
   const velocityChartData = {
     labels: t,
 
-    datasets: [{
-      label: 'Velocidade x Tempo',
-      data: velocityV,
-      borderColor: 'rgb(75, 192, 192)',
-      tension: 0.1
-    }]
+    datasets: [
+      {
+        label: "Velocidade x Tempo",
+        data: velocityV,
+        borderColor: "rgb(75, 192, 192)",
+        tension: 0.1,
+      },
+    ],
   };
   const acelerationChartData = {
     labels: t,
 
-    datasets: [{
-      label: 'Aceleração x tempo',
-      data: accelerationA,
-      fill: false,
-      borderColor: 'rgb(75, 192, 192)',
-      tension: 0.4
-    }]
+    datasets: [
+      {
+        label: "Aceleração x tempo",
+        data: accelerationA,
+        fill: false,
+        borderColor: "rgb(75, 192, 192)",
+        tension: 0.4,
+      },
+    ],
   };
-
 
   return {
     EMChartData,
     positionChartData,
     velocityChartData,
-    acelerationChartData
-  }
-
+    acelerationChartData,
+  };
 }

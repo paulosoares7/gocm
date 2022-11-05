@@ -1,9 +1,7 @@
 import { FormEvent, useContext, useState } from "react";
 import { ParticulesContext } from "../../Interfaces/Types";
 
-
-export function useNewParticuleModalActions(){
-  
+export function useNewParticuleModalActions() {
   const {
     handleCloseNewParticuleModal,
     currentParticule,
@@ -11,63 +9,65 @@ export function useNewParticuleModalActions(){
     setParticules,
     particules,
     setIsEdit,
-  }=useContext(ParticulesContext);
+  } = useContext(ParticulesContext);
 
-  const [nameParticule, setNameParticule] = useState('');
-  const [positionX, setPositionX] = useState('');
-  const [positionY, setPositionY] = useState('');
-  const [degrees, setDegrees] = useState('');
-  const [force, setForce] = useState('');
-  const [mass, setMass] = useState('');
+  const [nameParticule, setNameParticule] = useState("");
+  const [positionX, setPositionX] = useState("");
+  const [positionY, setPositionY] = useState("");
+  const [degrees, setDegrees] = useState("");
+  const [force, setForce] = useState("");
+  const [mass, setMass] = useState("");
 
+  async function handleCreateNewParticule(event: FormEvent) {
+    event.preventDefault();
 
-  async function handleCreateNewParticule (event: FormEvent){
-
-    event.preventDefault()
-
-    if (nameParticule && positionX && positionY && degrees && force && mass !== '') {
-
+    if (
+      nameParticule &&
+      positionX &&
+      positionY &&
+      degrees &&
+      force &&
+      mass !== ""
+    ) {
       await CreateNewParticule({
         nameParticule,
         positionX: Number(positionX),
         positionY: Number(positionY),
         degrees: Number(degrees),
         force: Number(force),
-        mass: Number(mass)
-      })
+        mass: Number(mass),
+      });
     } else {
-      return
+      return;
     }
-    handleCloseNewParticuleModal()
-    setNameParticule('')
-    setPositionX('')
-    setPositionY('')
-    setDegrees('')
-    setForce('')
-    setMass('')
-  };
+    handleCloseNewParticuleModal();
+    setNameParticule("");
+    setPositionX("");
+    setPositionY("");
+    setDegrees("");
+    setForce("");
+    setMass("");
+  }
 
-  function handleCancelEdit(){
-    const updateParticule ={
+  function handleCancelEdit() {
+    const updateParticule = {
       id: currentParticule.id,
-      nameParticule: currentParticule.oldName  ,
+      nameParticule: currentParticule.oldName,
       positionX: currentParticule.oldPositionX,
       positionY: currentParticule.oldPositionY,
       force: currentParticule.oldForce,
       degrees: currentParticule.oldDegrees,
       mass: currentParticule.oldMass,
       background: currentParticule.background,
-    }
+    };
 
-    setParticules([
-      ...particules, updateParticule
-    ])
-   
-    handleCloseNewParticuleModal()
-    setIsEdit(false)
+    setParticules([...particules, updateParticule]);
+
+    handleCloseNewParticuleModal();
+    setIsEdit(false);
   }
 
-  return{
+  return {
     handleCancelEdit,
     handleCreateNewParticule,
     nameParticule,
@@ -82,5 +82,5 @@ export function useNewParticuleModalActions(){
     setForce,
     mass,
     setMass,
-  }
+  };
 }

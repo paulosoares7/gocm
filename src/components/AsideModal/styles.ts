@@ -1,40 +1,37 @@
-import { darken, lighten } from "polished"
-import styled from "styled-components"
+import { darken, lighten } from "polished";
+import styled from "styled-components";
 
 export const Content = styled.aside`
-
   width: 100%;
   height: 100%;
   max-height: 768px;
   background: var(--secundary);
 
   h3 {
-      color: var(--title);
-      margin: 0.35rem 1rem;
-    }
+    color: var(--title);
+    margin: 0.35rem 1rem;
+  }
   h4 {
     color: var(--title);
-    margin: 1rem 1rem 0 ;
+    margin: 1rem 1rem 0;
   }
-  h5{
-    & +h5 {
+  h5 {
+    & + h5 {
       transition: color 0.4s;
       &:hover {
-        color: ${lighten(0.1, '#EBA417')};
+        color: ${lighten(0.1, "#EBA417")};
       }
     }
   }
   button {
-
     width: 2rem;
     height: 2rem;
 
     border: none;
-    padding:  0.25rem 0;
+    padding: 0.25rem 0;
 
     background: transparent;
     color: var(--yellow);
-
 
     position: absolute;
     right: 0;
@@ -43,7 +40,7 @@ export const Content = styled.aside`
 
     transition: 0.4s;
     &:hover {
-      color: ${darken(0.1, '#EBA417')};
+      color: ${darken(0.1, "#EBA417")};
     }
 
     svg {
@@ -62,12 +59,11 @@ export const Content = styled.aside`
     outline: none;
     color: var(--secundary);
   }
-  
 
-  .Parameters-CM{
+  .Parameters-CM {
     position: relative;
 
-    border-bottom: 1px solid #008B8B;
+    border-bottom: 1px solid #008b8b;
 
     margin: 0 auto;
     padding: 0.5rem;
@@ -86,18 +82,17 @@ export const Content = styled.aside`
 
       transition: 0.4s;
       &:hover {
-        background-color: ${darken(0.1, "#EBA417")}
-
+        background-color: ${darken(0.1, "#EBA417")};
       }
 
-      img{
+      img {
         margin: 0 auto;
       }
     }
     .range {
       position: relative;
 
-      input{
+      input {
         display: block;
         -webkit-appearance: none;
         background: #bdc3c7;
@@ -114,7 +109,7 @@ export const Content = styled.aside`
           height: 1rem;
           border-radius: 50%;
           border: 2px solid white;
-          transition: .3s ease-in-out;
+          transition: 0.3s ease-in-out;
           &:hover {
             background: var(--background);
             border: 2px solid var(--blue);
@@ -137,29 +132,27 @@ export const Content = styled.aside`
     width: 100%;
     color: var(--title);
     margin: 0.5rem auto 0 0.5rem;
-    
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    
+
     gap: 0.5rem;
   }
 
-  .valueRange{
-    position:relative;
+  .valueRange {
+    position: relative;
     top: 0.125rem;
-    left: -0.125rem
+    left: -0.125rem;
   }
-  
-    @media (max-width: 768px) {
-    
-      max-height:1024px;
 
-      .valueRange {
-        top: 0.25rem;
-      }
+  @media (max-width: 768px) {
+    max-height: 1024px;
+
+    .valueRange {
+      top: 0.25rem;
+    }
   }
-  @media (max-width: 320px) {
-    
+  @media (max-width: 375px) {
     text-align: center;
 
     button {
@@ -169,43 +162,41 @@ export const Content = styled.aside`
     .range {
       width: 13rem;
       height: 3.275rem;
-      top: 0;
-      left: 60px;
+      margin: 0 auto;
     }
-    
+
     .informationCM {
       font-size: 14pt;
       height: 6rem;
-      margin: 2rem auto 0 auto ;
+      margin: 2rem auto 0 auto;
     }
   }
-`
-export const InputsContainer= styled.form`
-  padding: 0 ;
+`;
+export const InputsContainer = styled.form`
+  padding: 0;
   margin: 1rem auto;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  transition:  0.5s linear;
-  
-  input[type=submit] {
+  transition: 0.5s linear;
+
+  input[type="submit"] {
     position: absolute;
     left: 0;
     transform: translateX(-1000%);
-
   }
-  input[type='number']{
+  input[type="number"] {
     outline: none;
     border: none;
     background: transparent;
     width: 100%;
     margin-left: 0.35rem;
-    border-left: 1px solid rgba(54,123,245,0.5);
+    border-left: 1px solid rgba(54, 123, 245, 0.5);
     color: var(--blue);
     height: 1.5rem;
     padding-left: 0.25rem;
 
-    &::placeholder{
+    &::placeholder {
       color: var(--title);
     }
   }
@@ -216,21 +207,20 @@ export const InputsContainer= styled.form`
     cursor: pointer;
   }
 
-  .inputContainer{
-
+  .inputContainer {
     display: flex;
     align-items: center;
 
     background: var(--background);
-    box-shadow: 0 1px 2px 0 ;
-    box-shadow: 0 0 15px rgba(0,0,0,.2); 
+    box-shadow: 0 1px 2px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
     width: 15.625rem;
     padding: 0.5rem 0.75rem;
-    
-    border-radius: 50px
+
+    border-radius: 50px;
   }
-  svg{
+  svg {
     margin: 0;
     width: 2rem;
     height: 2rem;
@@ -239,14 +229,12 @@ export const InputsContainer= styled.form`
     color: var(--yellow);
     cursor: pointer;
   }
-  
 
-  @media (max-width: 320px ){
+  @media (max-width: 375px) {
     padding: 0 1rem;
 
-  .inputContainer{
+    .inputContainer {
       width: 100%;
     }
-    
   }
-`
+`;

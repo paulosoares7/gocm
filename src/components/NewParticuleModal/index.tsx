@@ -4,13 +4,11 @@ import { ParticulesContext } from "../../Interfaces/Types";
 import { useNewParticuleModalActions } from "../../services/hooks/useNewParticuleModalActions";
 import { Container } from "./styles";
 
-
-export function NewPartículeModal () {
-
+export function NewPartículeModal() {
   const {
-    isParticuleModalOpen, 
-    handleCloseNewParticuleModal, 
-    isEdit, 
+    isParticuleModalOpen,
+    handleCloseNewParticuleModal,
+    isEdit,
     nameParticuleToEdit,
     positionXToEdit,
     positionYToEdit,
@@ -23,9 +21,9 @@ export function NewPartículeModal () {
     setDegreesToEdit,
     setForceToEdit,
     setMassToEdit,
-    handleEditOldParticule    
+    handleEditOldParticule,
   } = useContext(ParticulesContext);
-  
+
   const {
     handleCancelEdit,
     handleCreateNewParticule,
@@ -43,127 +41,131 @@ export function NewPartículeModal () {
     setMass,
   } = useNewParticuleModalActions();
 
-
-  return (
-    isEdit ? (
-      <Modal 
-        isOpen = {isParticuleModalOpen}
-        onRequestClose = {handleCancelEdit}
-        overlayClassName = 'react-modal-overlay'
-        className = 'react-modal-content'
-      
-      >
+  return isEdit ? (
+    <Modal
+      isOpen={isParticuleModalOpen}
+      onRequestClose={handleCancelEdit}
+      overlayClassName="react-modal-overlay"
+      className="react-modal-content"
+    >
       <Container onSubmit={handleEditOldParticule}>
-        <h2><i>Editar partícula</i></h2>
-      
-        <input 
-          type = 'text' 
-          placeholder = 'Nome da partícula'
+        <h2>
+          <i>Editar partícula</i>
+        </h2>
+
+        <input
+          type="text"
+          placeholder="Nome da partícula"
           value={nameParticuleToEdit}
-          onChange = {event => setNameParticuleToEdit(event.target.value)}
+          onChange={(event) => setNameParticuleToEdit(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Posição em x (m)'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Posição em x (m)"
           value={positionXToEdit}
-          onChange = {event => setPositionXToEdit(event.target.value)}
+          onChange={(event) => setPositionXToEdit(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Posição em y (m)'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Posição em y (m)"
           value={positionYToEdit}
-          onChange = {event => setPositionYToEdit(event.target.value)}
+          onChange={(event) => setPositionYToEdit(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Força externa atuante (N)'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Força externa atuante (N)"
           value={forceToEdit}
-          onChange = {event => setForceToEdit(event.target.value)}
+          onChange={(event) => setForceToEdit(event.target.value)}
         />
-        <input 
-          placeholder = 'Grau de inclinação da força aplicada em relação a x'
+        <input
+          placeholder="Grau de inclinação da força aplicada em relação a x"
           value={degreesToEdit}
-          onChange = {event => setDegreesToEdit(event.target.value)}
+          onChange={(event) => setDegreesToEdit(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Massa da partícula (Kg)'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Massa da partícula (Kg)"
           value={massToEdit}
-          onChange = {event => setMassToEdit(event.target.value)}
+          onChange={(event) => setMassToEdit(event.target.value)}
         />
 
         <div className="buttonBox">
-          <button type="submit"><h5>Atualizar dados</h5></button>
-          <button type="button" onClick={handleCancelEdit}><h5>Cancelar</h5></button>
+          <button type="submit">
+            <h5>Atualizar dados</h5>
+          </button>
+          <button type="button" onClick={handleCancelEdit}>
+            <h5>Cancelar</h5>
+          </button>
         </div>
-
       </Container>
     </Modal>
-    ):(
-      <Modal 
-        isOpen = {isParticuleModalOpen}
-        onRequestClose = {handleCloseNewParticuleModal}
-        overlayClassName = 'react-modal-overlay'
-        className = 'react-modal-content'
-      >
-
+  ) : (
+    <Modal
+      isOpen={isParticuleModalOpen}
+      onRequestClose={handleCloseNewParticuleModal}
+      overlayClassName="react-modal-overlay"
+      className="react-modal-content"
+    >
       <Container onSubmit={handleCreateNewParticule}>
-        <h2><i>Adicionar partícula</i></h2>
-      
-        <input 
-          type = 'text' 
-          placeholder = 'Nome da partícula'
+        <h2>
+          <i>Adicionar partícula</i>
+        </h2>
+
+        <input
+          type="text"
+          placeholder="Nome da partícula"
           value={nameParticule}
-          onChange = {event => setNameParticule(event.target.value)}
+          onChange={(event) => setNameParticule(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Posição em x (m)'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Posição em x (m)"
           value={positionX}
-          onChange = {event => setPositionX(event.target.value)}
+          onChange={(event) => setPositionX(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Posição em y (m)'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Posição em y (m)"
           value={positionY}
-          onChange = {event => setPositionY(event.target.value)}
+          onChange={(event) => setPositionY(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Força externa atuante (N)'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Força externa atuante (N)"
           value={force}
-          onChange = {event => setForce(event.target.value)}
+          onChange={(event) => setForce(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Grau de inclinação da força aplicada em relação a x'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Grau de inclinação da força aplicada em relação a x"
           value={degrees}
-          onChange = {event => setDegrees(event.target.value)}
+          onChange={(event) => setDegrees(event.target.value)}
         />
-        <input 
-          type = 'number'
-          step=".00001" 
-          placeholder = 'Massa da partícula (Kg)'
+        <input
+          type="number"
+          step=".00001"
+          placeholder="Massa da partícula (Kg)"
           value={mass}
-          onChange = {event => setMass(event.target.value)}
+          onChange={(event) => setMass(event.target.value)}
         />
 
         <div className="buttonBox">
-
-          <button type="submit"><h5>Cadastrar dados</h5></button>
-          <button type="button" onClick={handleCloseNewParticuleModal}><h5>Cancelar</h5></button>
+          <button type="submit">
+            <h5>Cadastrar dados</h5>
+          </button>
+          <button type="button" onClick={handleCloseNewParticuleModal}>
+            <h5>Cancelar</h5>
+          </button>
         </div>
       </Container>
-      </Modal>
-    )
-    
-  )
+    </Modal>
+  );
 }

@@ -1,17 +1,16 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const Container =  styled.header`
-
+export const Container = styled.header`
   background: var(--primary);
-  border-bottom: 1px solid #008B8B;
+  border-bottom: 1px solid #008b8b;
   height: 3.5rem;
-`
-export const Content =  styled.div`
+`;
+export const Content = styled.div`
   max-width: 1220px;
   height: 3.5rem;
   margin: 0 auto;
 
-  padding: 0 2rem ;
+  padding: 0 2rem;
 
   display: flex;
   align-items: center;
@@ -20,17 +19,15 @@ export const Content =  styled.div`
   img {
     max-height: 40px;
   }
-  .svgBox{
-
+  .svgBox {
     width: 7rem;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
 
     svg {
-      
-      padding: 0 ;
-      margin: 0  auto;
+      padding: 0;
+      margin: 0 auto;
       height: 2.5rem;
       width: 2.5rem;
       color: var(--blue);
@@ -38,13 +35,12 @@ export const Content =  styled.div`
       cursor: pointer;
 
       &:hover {
-        filter: brightness(0.8)
+        filter: brightness(0.8);
       }
     }
   }
-  
+
   nav {
-    
     width: 12rem;
     height: 3.5rem;
     border: 0;
@@ -54,7 +50,7 @@ export const Content =  styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     a {
       display: inline-block;
       position: relative;
@@ -65,23 +61,22 @@ export const Content =  styled.div`
       transition: 0.6s;
 
       &:hover {
-      filter: brightness(0.8)
+        filter: brightness(0.8);
       }
 
       svg {
-
-        padding: 0 ;
-        margin: 0  auto;
+        padding: 0;
+        margin: 0 auto;
         width: 2.5rem;
         height: 3rem;
-        color: var(--blue)
+        color: var(--blue);
       }
       &.active::after {
-        content: '';
+        content: "";
         height: 3px;
         border-radius: 3px 3px 0 0;
         width: 100%;
-        
+
         position: absolute;
         bottom: 1px;
         left: 0;
@@ -91,27 +86,26 @@ export const Content =  styled.div`
       transition: 0.6s;
 
       &:hover::after {
-        content: '';
+        content: "";
         height: 3px;
         border-radius: 3px 3px 0 0;
         width: 100%;
-        
+
         position: absolute;
         bottom: 1px;
         left: 0;
         background: var(--blue);
       }
     }
-  }  
-  
-  @media (max-width: 414px) {
-    img{
+  }
+
+  @media (max-width: 375px) {
+    img {
       display: none;
     }
     nav {
       margin-left: 3.5rem;
-      margin-right: 1rem
-
+      margin-right: 1rem;
     }
   }
 `;

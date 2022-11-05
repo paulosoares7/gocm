@@ -1,318 +1,305 @@
-const tooltipEnable =  {
-      enabled: true // <-- this option disables tooltip
-    }
+const tooltipEnable = {
+  enabled: true, // <-- this option disables tooltip
+};
 
 //options
 export const firstChartOptions = {
-  
   type: "Bubble",
   responsive: true,
   maintainAspectRatio: false,
- 
-  plugins:{
-    legend:{
+
+  plugins: {
+    legend: {
       display: true,
-      position: 'bottom' as const,
-      align: 'start' as const,
-      
-      labels:{
-        color: '#008B8B',
-      
+      position: "bottom" as const,
+      align: "start" as const,
+
+      labels: {
+        color: "#008B8B",
+
         usePointStyle: true,
-        pointStyle: 'circle',
-        textAlign: 'left' as const
+        pointStyle: "circle",
+        textAlign: "left" as const,
       },
-      
     },
     tooltip: {
-      enabled: false
-    }
+      enabled: false,
+    },
   },
-  
+
   scales: {
     y: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'y (m)'
-      }
+        text: "y (m)",
+      },
     },
     x: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'x (m)'
-      }
+        text: "x (m)",
+      },
     },
   },
   layout: {
     padding: 2,
-  }
-}
+  },
+};
 export const secondChartOptions = {
   responsive: true,
   maintainAspectRatio: false,
   scales: {
     y: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'y (m)'
-      }
+        text: "y (m)",
+      },
     },
     x: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'x (m)'
-      }
+        text: "x (m)",
+      },
     },
-
   },
   layout: {
     padding: 2,
   },
-  plugins:{
-    legend:{
+  plugins: {
+    legend: {
       display: false,
     },
-  }
-
-}
+  },
+};
 export const EMChartOptions = {
-
   responsive: true,
   maintainAspectRatio: false,
 
-  plugins:{
-    legend:{
+  plugins: {
+    legend: {
       display: true,
-      position: 'top' as const,
-      align: 'center' as const,
-      
-      labels:{
-        color: '#008B8B',
-      
+      position: "top" as const,
+      align: "center" as const,
+
+      labels: {
+        color: "#008B8B",
+
         usePointStyle: true,
-        pointStyle: 'circle',
-        textAlign: 'left' as const
+        pointStyle: "circle",
+        textAlign: "left" as const,
       },
     },
     tooltip: {
-      enabled: true
-    }
-    
-  },   
-   
+      enabled: true,
+    },
+  },
+
   scales: {
     y: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'Energia (J)'
-      }
+        text: "Energia (J)",
+      },
     },
     x: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'Tempo (s)'
-      }
+        text: "Tempo (s)",
+      },
     },
-
   },
   layout: {
     padding: 2,
   },
-}
+};
 export const positionChartOptions = {
   responsive: true,
   maintainAspectRatio: false,
   scales: {
     y: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'Posição (m)'
-      }
+        text: "Posição (m)",
+      },
     },
     x: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'Tempo (s)'
-      }
+        text: "Tempo (s)",
+      },
     },
-
   },
   layout: {
     padding: 2,
   },
-  plugins:{
-    legend:{
+  plugins: {
+    legend: {
       display: false,
     },
-    tooltip: tooltipEnable
-  }, 
-
-}
+    tooltip: tooltipEnable,
+  },
+};
 export const velocityChartOptions = {
   responsive: true,
   maintainAspectRatio: false,
   scales: {
     y: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'Velocidade (m/s)'
-      }
+        text: "Velocidade (m/s)",
+      },
     },
     x: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'Tempo (s)'
-      }
+        text: "Tempo (s)",
+      },
     },
-
   },
   layout: {
     padding: 2,
   },
-  plugins:{
-    legend:{
+  plugins: {
+    legend: {
       display: false,
     },
-    tooltip: tooltipEnable
-  }, 
-
-}
+    tooltip: tooltipEnable,
+  },
+};
 export const acelerationChartOptions = {
   responsive: true,
   maintainAspectRatio: false,
   scales: {
     y: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'Aceleração (m/s²)'
-      }
+        text: "Aceleração (m/s²)",
+      },
     },
     x: {
       ticks: {
-        color: '#61DAFB',
+        color: "#61DAFB",
       },
-      grid:{
-        tickColor: '#06647e',
+      grid: {
+        tickColor: "#06647e",
         tickLength: 7,
-        color: '#444444',
+        color: "#444444",
       },
       title: {
-        color: '#04D361',
+        color: "#04D361",
         display: true,
-        text: 'Tempo (s)'
-      }
+        text: "Tempo (s)",
+      },
     },
-
   },
   layout: {
     padding: 2,
   },
-  plugins:{
-    legend:{
+  plugins: {
+    legend: {
       display: false,
     },
-    
-    tooltip: tooltipEnable
-  },
 
-}
+    tooltip: tooltipEnable,
+  },
+};
 //block options

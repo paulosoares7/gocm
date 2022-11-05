@@ -1,5 +1,5 @@
 import { transparentize } from "polished";
-import styled, {createGlobalStyle} from "styled-components"
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -59,7 +59,7 @@ export const GlobalStyle = createGlobalStyle`
     background: var(--blue-dark);
   }
   ::-webkit-scrollbar-track-piece {
-    background: ${transparentize(0.1,"#30323D")};
+    background: ${transparentize(0.1, "#30323D")};
   }
   ::-webkit-scrollbar-thumb {
       background: var(--blue-dark);
@@ -72,7 +72,7 @@ export const GlobalStyle = createGlobalStyle`
  
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
+    -webkit-appearance: none;
    
   }
 
@@ -113,8 +113,8 @@ export const GlobalStyle = createGlobalStyle`
       
       margin-bottom: 25%;
     }
-    @media (max-width: 320px) {
-      width: 100%;
+    @media (max-width: 375px) {
+      width: 25rem;
       text-align: center;
       margin-bottom: 25%;
       padding: 1.125rem;
@@ -156,15 +156,15 @@ export const GlobalStyle = createGlobalStyle`
       height: calc(100vh - 42px);
       max-height:1024px;
     }
-    @media (max-width: 414px) {
+    @media (max-width: 375px) {
       
       height: 100%;
-      top: 0;
       width: 100%;
+      top: 0;
     }
 
   }
-`
+`;
 // global styles of charts
 export const ChartContainer = styled.div`
   display: flex;
@@ -172,32 +172,29 @@ export const ChartContainer = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
-  margin:  0 auto;
-  padding:  0.25rem ;
-  
-  
-  h1{
+  margin: 0 auto;
+  padding: 0.25rem;
+
+  h1 {
     font-size: 30px;
     margin-left: 2.5rem;
   }
-  
-  @media (max-width: 768px) {
 
-    padding:  0.25rem 0.25rem 1rem 0.25rem ;
+  @media (max-width: 768px) {
+    padding: 0.25rem 0.25rem 1rem 0.25rem;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 375px) {
     padding: 0;
 
-    h1{
+    h1 {
       text-align: center;
       margin-left: 0;
     }
-
   }
-  
-`
+`;
 export const ChartContent = styled.div`
   width: 100%;
+
   height: calc(100% - 0.5rem);
 
   padding: 1.25rem 0;
@@ -205,19 +202,17 @@ export const ChartContent = styled.div`
   border-top: 1px solid var(--blue);
 
   overflow-y: auto;
-  
+
   @media (max-width: 768px) {
     height: calc(100% - 2.5rem);
-    
   }
-  @media (max-width: 320px) {
-    
+  @media (max-width: 375px) {
     padding: 1.25rem 0.25rem;
-
+    margin: 0 auto;
   }
-  `;
-export const ResponsiveContent = styled.div `
-  height:100%;
+`;
+export const ResponsiveContent = styled.div`
+  height: 100%;
 
   padding: 0.75rem;
   margin: 0 auto;
@@ -231,11 +226,6 @@ export const ResponsiveContent = styled.div `
     height: 90%;
   }
   @media (max-width: 414px) {
-    
     height: 80%;
   }
-
 `;
-
-
-  

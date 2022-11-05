@@ -1,32 +1,27 @@
-import {darken, lighten} from "polished";
+import { darken, lighten } from "polished";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  
   padding: 0.5rem;
   height: 24.5rem;
   overflow-y: auto;
-  
-  @media (max-width: 768px){
-    
+
+  @media (max-width: 768px) {
     height: 37rem;
   }
-  @media (max-width: 320px){
-    
+  @media (max-width: 375px) {
     display: grid;
-    gap: 1rem;
     gap: 0.5rem;
-    grid-template-rows: repeat(5, 1fr);
 
-    grid-template-columns: repeat( 1, 1fr)
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
-  
 `;
 
-export const List = styled.div<{isBackground: string}>`
+export const List = styled.div<{ isBackground: string }>`
   position: relative;
 
-  background: var(--primary); 
+  background: var(--primary);
 
   border: 1px solid var(--yellow);
   border-radius: 0.5rem;
@@ -44,11 +39,11 @@ export const List = styled.div<{isBackground: string}>`
   }
   th {
     padding: 0 0.5rem;
-    & + th{
+    & + th {
       width: 4rem;
       padding: 0;
     }
-    .buttonContainer{
+    .buttonContainer {
       display: flex;
       align-items: center;
       justify-content: right;
@@ -61,16 +56,15 @@ export const List = styled.div<{isBackground: string}>`
         width: 1.5rem;
         height: 1.5rem;
         border: none;
-        svg{
+        svg {
           width: 1.25rem;
           height: 1.25rem;
-          color: ${darken(0.3, '#04D361')};
+          color: ${darken(0.3, "#04D361")};
           transition: color 0.2s;
 
-          &:hover{
-            color: ${lighten(0.1, '#04D361')};
+          &:hover {
+            color: ${lighten(0.1, "#04D361")};
           }
-         
         }
       }
     }
@@ -78,36 +72,36 @@ export const List = styled.div<{isBackground: string}>`
   tr {
     font-weight: 400;
     text-align: left;
-
   }
   tbody {
     tr {
-    font-weight: 400;
-    text-align: left;
-    padding: 0 6rem;
-  
-
-  }
+      font-weight: 400;
+      text-align: left;
+      padding: 0 6rem;
+    }
   }
   h3::after {
-    content: '';
+    content: "";
     height: 1px;
     width: 1px;
     border-radius: 50%;
-        
+
     position: absolute;
     padding: 0.75rem;
     top: 6px;
     left: 7px;
-    background: ${(isBackground)=> isBackground.isBackground};
-  }
-  
-  @media (max-width: 320px){
-    
-    width: 15rem;
-    height: 11rem;
-    font-size: 14pt;
-
+    background: ${(isBackground) => isBackground.isBackground};
   }
 
+  @media (max-width: 375px) {
+    width: 17rem;
+    height: 9rem;
+
+    th {
+      & + th {
+        width: 5.5rem;
+        padding: 0;
+      }
+    }
+  }
 `;

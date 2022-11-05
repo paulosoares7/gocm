@@ -63,7 +63,7 @@ export const Container = styled.form`
     }
   }
   }
-  @media (max-width: 320px){
+  @media (max-width: 375px){
     .buttonBox{
       flex-direction: column;
       margin-top: 0.5rem;
