@@ -7,4 +7,4 @@ publish = "./build/"
 [[redirects]]
 base = "/*"
 command = "index.html"
-status = "200"
+status = 200
