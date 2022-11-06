@@ -119,7 +119,6 @@ As seguintes ferramentas foram usadas na construção do projeto
 -   **[React Router](https://v5.reactrouter.com/web/guides/quick-start)**
 -   **[ChartJS](https://www.chartjs.org)**
 -   **[Polished](https://polished.js.org)**
--   **[Polished](https://polished.js.org)**
 
 > Veja o arquivo  [package.json](https://github.com/paulosoares7/gocm/blob/main/package.json)
 
