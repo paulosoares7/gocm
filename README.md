@@ -44,16 +44,17 @@
  <a href="#-como-executar">Como executar</a> • 
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-autor">Autor</a> • 
- <a href="#user-content--licença">Licença</a>
+ <a href="#-licença">Licença</a>
 </h2>
 
 ## 💻 Sobre o projeto
 
-🔴 Go CM - É uma ferramenta cumputacional de cunho educacional 👨🏽‍🏫 ou científico 📈. Foi desenvolvido com o objetivo de descrever o movimento do Centro de Massa, tornando - se mais uma opção para auxiliar a abordagem desta temática em um sistema de partículas de forma dinâmica, possibiliando o usuário fazer obsevações, mainipulações e discussões dos respectivos dado deste sistema.🚀 
+🔴 Go CM - É uma ferramenta cumputacional de cunho educacional 👨🏽‍🏫 ou científico 📈. Foi desenvolvido com o objetivo de descrever o movimento do Centro de Massa, tornando - se mais uma opção para 
+auxiliar a abordagem desta temática em um sistema de partículas de forma dinâmica, possibiliando o usuário fazer obsevações, manipulações e discussões dos respectivos dados do sistema criado.🚀👨🏾‍🚀 
 <p>
   Esta ferramenta é oriundo de trabalho de conclusão de curso do acadêmico Paulo Soares (Autor), do curso de licenciatura em Física do Instituto Federal do Amazonas - 
-  Campus Manaus Centro. Este recurso foi densenvolvido com carinho em prol ao ensino de Física, pois para o ensino de Física, pois acreditamos no ideal de que a 
-  educação abri novos caminhos para o desenvolvimento pessoal do estudante, possibilitando novas descobertas para o mesmo.
+  Campus Manaus Centro. Este recurso foi densenvolvido com carinho em prol ao ensino de Física, pois acreditamos no ideal de que a 
+  educação abre novos caminhos para o desenvolvimento pessoal do estudante.
 </p>
  
  ## ✨ Funcionalidades
@@ -64,9 +65,9 @@
   - **📃 Emitir Relatório em PDF**
   - **📈 Gráfico para posicionar o Centro de Massa**
   - **📉 Gráfico do movimento do Centro de Massa**
-  - **📊 Gráfico da Energia cinética, modúlo da posição, velocidade e aceleração em relação ao tempo**
+  - **📊 Gráfico da Energia cinética, módulo da posição, velocidade e aceleração em relação ao tempo**
 
-## 🎨 Layout
+ ## 🎨 Layout
 
 O layout da aplicação para web:
 
