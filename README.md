@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://gocm.netlify.app">
-    <img alt="GoCM" src="https://gocm.netlify.app/static/media/GO.e2a5b4c53594ac408068afb00f0eaca3.svg" width="320" />
+  <a href="https://cmgo.netlify.app/">
+    <img alt="GoCM" src="https://cmgo.netlify.app/static/media/GO.e2a5b4c53594ac408068afb00f0eaca3.svg" width="320" />
   </a>
 </p>
 <h1 align="center">
